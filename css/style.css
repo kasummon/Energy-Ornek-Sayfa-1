@@ -77,11 +77,11 @@
     transition:ease-in-out 8000ms;
 }
 
-.photo-holder img:nth-child(odd){
+.img-container:nth-child(odd) img{
     transform-origin: left;
 }
 
-.photo-holder img:nth-child(even){
+.img-container:nth-child(even) img{
     transform-origin: right;
 }
 
