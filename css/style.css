@@ -62,7 +62,7 @@
 }
 
 #photo-inner{
-    transition: ease-in-out 500ms;
+    transition: ease-in-out 600ms;
 }
 
 .img-container{
@@ -127,12 +127,23 @@
     opacity:0.8;
     margin:10px;
     border:2px solid whitesmoke;
+    transition:ease-in-out 600ms;
 }
 
 .dummy {
     margin-top:7vh;
     height:93vh;
     background-color:white;
+}
+
+.left-arrow-btn{
+    top:0px;
+    left:40px;
+}
+
+.right-arrow-btn{
+    top:0px;
+    right:40px;
 }
 
 /* Burayı değiştir düzenle. */
@@ -271,13 +282,3 @@ p{
 }
 
 /* animations */
-
-@keyframes scale-down{
-    from{
-        transform: scale(1.2);
-    }
-
-    to{
-        transform: scale(1);
-    }
-}
