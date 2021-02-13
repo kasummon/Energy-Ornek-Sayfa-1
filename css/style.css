@@ -305,7 +305,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(245, 245, 245, 0.1)  ;
-    backdrop-filter: blur(1px) saturate(100%) contrast(75%) brightness(130%);
+    backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
     border-radius: 20px;
     transition: 600ms ease-in-out;
 }
