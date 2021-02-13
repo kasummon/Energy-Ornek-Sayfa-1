@@ -57,11 +57,11 @@
 }
 
 .card:nth-child(1){
-    background-image: url("./assets/photos/american-public-power-association-513dBrMJ_5w-unsplash.jpg");
+    background-image: url("../assets/photos/american-public-power-association-513dBrMJ_5w-unsplash.jpg");
 }
 
 .card:nth-child(2){
-    background-image: url("//assets/photos/light-bulb-3104355_1920.jpg");
+    background-image: url("../assets/photos/light-bulb-3104355_1920.jpg");
 }
 
 .card:nth-child(3){
@@ -69,11 +69,11 @@
 }
 
 .card:nth-child(4){
-    background-image: url("assets/photos/pexels-pixabay-459728.jpg");
+    background-image: url("../assets/photos/pexels-pixabay-459728.jpg");
 }
 
 .card:nth-child(5){
-    background-image: url("/assets/photos/pexels-pixabay-459740.jpg");
+    background-image: url("../assets/photos/pexels-pixabay-459740.jpg");
 }
 
 .card-text{
