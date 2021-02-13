@@ -37,7 +37,105 @@
 .inner-col{
     width: 100%;
     flex-wrap: wrap;
+<<<<<<< HEAD
     padding:20px 10px;
+=======
+}
+
+.card{
+    height: 400px;
+    flex: 1 1 25%;
+    margin:2rem;
+    min-width: 400px;
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+}
+
+.card::after{
+    content:"";
+    position:absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    opacity: 0.3;
+    transition:ease-in-out 1000ms;
+}
+
+.card:nth-child(1){
+    background-image: url("../assets/photos/american-public-power-association-513dBrMJ_5w-unsplash.jpg");
+}
+
+.card:nth-child(2){
+    background-image: url("../assets/photos/light-bulb-3104355_1920.jpg");
+}
+
+.card:nth-child(3){
+    background-image: url("../assets/photos/pexels-pixabay-433308.jpg");
+}
+
+.card:nth-child(4){
+    background-image: url("../assets/photos/pexels-pixabay-459728.jpg");
+}
+
+.card:nth-child(5){
+    background-image: url("../assets/photos/pexels-pixabay-459740.jpg");
+}
+
+.card-text{
+    position:absolute;
+    width: 100%;
+    height: 30%;
+    bottom:-30px;
+    right:-30px;
+    background-color: royalblue;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color:whitesmoke;
+    transition:1000ms ease-in-out;
+    transform-origin: bottom right;
+}
+
+.card-text p{
+    width: 100%;
+    height: 100%;
+    padding:20px;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.card-text p::after{
+    content: "";
+    position: absolute;
+    top:-100px;
+    left:-100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    transition: ease-in-out 1000ms;   
+    z-index: -1;   
+}
+
+.card:hover  p::after{
+    top:50%;
+    left: 50%;
+    transform: scale(10);
+
+}
+
+.card:hover .card-text {
+    border-bottom:2px solid royalblue;
+    border-right:2px solid royalblue;
+    color:royalblue;
+}
+
+.card:hover .card::after{
+    opacity: 0;
+>>>>>>> 4a78290604089b45ff15d2a907b44e84465f52a0
 }
 
 .com-bar{
