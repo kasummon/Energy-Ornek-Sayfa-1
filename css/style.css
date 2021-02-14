@@ -5,9 +5,7 @@
     font-family: 'Rubik', sans-serif;
 }
 
-.header{
-    background-color:royalblue;
-}
+
 
 .container-80{
     width:80%;
@@ -37,105 +35,7 @@
 .inner-col{
     width: 100%;
     flex-wrap: wrap;
-<<<<<<< HEAD
     padding:20px 10px;
-=======
-}
-
-.card{
-    height: 400px;
-    flex: 1 1 25%;
-    margin:2rem;
-    min-width: 400px;
-    background-position: center;
-    background-repeat: none;
-    background-size: cover;
-}
-
-.card::after{
-    content:"";
-    position:absolute;
-    top:0px;
-    left:0px;
-    width: 100%;
-    height: 100%;
-    background-color: whitesmoke;
-    opacity: 0.3;
-    transition:ease-in-out 1000ms;
-}
-
-.card:nth-child(1){
-    background-image: url("../assets/photos/american-public-power-association-513dBrMJ_5w-unsplash.jpg");
-}
-
-.card:nth-child(2){
-    background-image: url("../assets/photos/light-bulb-3104355_1920.jpg");
-}
-
-.card:nth-child(3){
-    background-image: url("../assets/photos/pexels-pixabay-433308.jpg");
-}
-
-.card:nth-child(4){
-    background-image: url("../assets/photos/pexels-pixabay-459728.jpg");
-}
-
-.card:nth-child(5){
-    background-image: url("../assets/photos/pexels-pixabay-459740.jpg");
-}
-
-.card-text{
-    position:absolute;
-    width: 100%;
-    height: 30%;
-    bottom:-30px;
-    right:-30px;
-    background-color: royalblue;
-    display: grid;
-    place-items: center;
-    text-align: center;
-    color:whitesmoke;
-    transition:1000ms ease-in-out;
-    transform-origin: bottom right;
-}
-
-.card-text p{
-    width: 100%;
-    height: 100%;
-    padding:20px;
-    overflow: hidden;
-    z-index: 3;
-}
-
-.card-text p::after{
-    content: "";
-    position: absolute;
-    top:-100px;
-    left:-100px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: whitesmoke;
-    transition: ease-in-out 1000ms;   
-    z-index: -1;   
-}
-
-.card:hover  p::after{
-    top:50%;
-    left: 50%;
-    transform: scale(10);
-
-}
-
-.card:hover .card-text {
-    border-bottom:2px solid royalblue;
-    border-right:2px solid royalblue;
-    color:royalblue;
-}
-
-.card:hover .card::after{
-    opacity: 0;
->>>>>>> 4a78290604089b45ff15d2a907b44e84465f52a0
 }
 
 .com-bar{
@@ -304,7 +204,7 @@
     left: 0px;
     width: 100%;
     height: 100%;
-    background-color: rgba(245, 245, 245, 0.1)  ;
+    background-color: rgba(245, 245, 245, 0.3)  ;
     backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
     border-radius: 20px;
     transition: 600ms ease-in-out;
@@ -324,13 +224,17 @@
 }
 
 .kesfet{
-    width: 30%;
+    width: 100%;
     padding:25px 0;
     outline: none;
     border:none;
-    float: right;
     border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size:1.1rem;
+}
 
+.kesfet:hover{
+   /*  box-shadow: inset 3px 5px whitesmoke; */
 }
 
 .text-box{
@@ -373,15 +277,64 @@
 
 .hakkimizda{
     margin:200px auto;
-    text-align: left !important;
     border-radius: 20px;
+    line-height: 25px;
+    letter-spacing: 1px;
 }
 
 .hakkimizda p {
     text-indent: 30px;
     margin:20px auto;
     width:95%;
+    color:whitesmoke;
 }
+
+.bg-fixed{
+    height: 70vh;
+    background-color: rgba(65, 105, 225, 0.5);
+}
+
+.bg-fixed::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top:0px;
+    left:0px;
+    background-attachment: fixed;
+    background-image: url("../assets/photos/rohan-makhecha-jw3GOzxiSkw-unsplash.jpg");
+    background-position: 50% 40%;
+    background-size:cover;
+    z-index: -1;
+}
+
+.neden-biz{
+    flex-wrap: wrap;
+}
+
+.elements{
+    height: 300px;
+    width: 30%;
+    flex: 1 1 auto; 
+    margin:10px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: linear-gradient(0deg, rgb(184, 184, 184) 0%, rgba(255,255,255,0) 100%);
+}
+
+.elements i{
+    font-size: 3rem;
+}
+
+.elements-image h5{
+    margin-top: 5%;
+}
+
+.elements .kesfet{
+    margin-top:auto;
+}
+
+
 
 /* Burayı değiştir düzenle. */
 
@@ -536,13 +489,34 @@ h5{
     position:absolute;
 }
 
+.light-bg-1{
+    background-color: rgb(255, 255, 255);
+    color:royalblue;
+}
+
+.dark-bg-1{
+    background-color: rgb(71, 117, 255);
+    color:#f5f5f5;
+    
+}
+
 .light-bg{
-    background-color: whitesmoke;
+    background-color: rgb(245, 245, 245);
     color:royalblue;
 }
 
 .dark-bg{
     background-color: rgba(65, 105, 225, 0.9);
+    color:rgb(245, 245, 245);
+}
+
+.light-bg-3{
+    background-color: rgb(179, 179, 179);
+    color:royalblue;
+}
+
+.dark-bg-3{
+    background-color: rgba(48, 74, 151, 1);
     color:whitesmoke;
 }
 
@@ -559,9 +533,6 @@ h5{
     margin-top:auto;
 }
 
-section{
-    padding-top:50px;
-}
 
 .p-1{
     padding:1rem;
@@ -577,5 +548,9 @@ section{
 
 .p-4{
     padding:4rem;
+}
+
+.p-5{
+    padding:5rem;
 }
 /* animations */
