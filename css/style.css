@@ -152,8 +152,8 @@
 
 .marka{
     top:0px;
-    left:40%;
-    width: 20%;
+    left:42.5%;
+    width: 15%;
     padding:10px;
     background-color:whitesmoke;
     border-bottom-left-radius:10px;
@@ -162,8 +162,8 @@
 }
 
 .card{
-    height: 500px;
-    margin: 10px 20px;
+    height: 400px;
+    margin: 15px;
     flex: 1 1 20%;
     min-width: 200px;
     overflow: hidden;
@@ -197,6 +197,10 @@
     background-image: url("../assets/photos/rohan-makhecha-jw3GOzxiSkw-unsplash.jpg");
 }
 
+.card:nth-child(7){
+    background-image: url("../assets/photos/rohan-makhecha-jw3GOzxiSkw-unsplash.jpg");
+}
+
 .card::after{
     content: "";
     position:absolute;
@@ -225,7 +229,7 @@
 
 .kesfet{
     width: 100%;
-    padding:25px 0;
+    padding:15px 0;
     outline: none;
     border:none;
     border-bottom-right-radius: 20px;
@@ -291,7 +295,7 @@
 
 .bg-fixed{
     height: 70vh;
-    background-color: rgba(65, 105, 225, 0.5);
+    background-color: rgba(223, 223, 223, 0.3);
 }
 
 .bg-fixed::after{
@@ -313,13 +317,21 @@
 }
 
 .elements{
-    height: 300px;
-    width: 30%;
-    flex: 1 1 auto; 
-    margin:10px;
+    min-width: 350px;
+    width: 100%;
+    flex: 1 1 30%; 
+    margin:40px 15px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     background: linear-gradient(0deg, rgb(184, 184, 184) 0%, rgba(255,255,255,0) 100%);
+    box-shadow: 0 0 12px 2px dimgray;
+    transition:300ms ease-in-out;
+}
+
+.elements:hover{
+    transform:translateY(-5%) scale(1.05);
+    box-shadow: 0 10px 10px 2px dimgray;
+
 }
 
 .elements i{
@@ -339,9 +351,7 @@
 /* Burayı değiştir düzenle. */
 
 
-h1{
-    text-align: center;
-}
+
 ul{
     list-style: none;
 }
@@ -535,7 +545,7 @@ h5{
 
 
 .p-1{
-    padding:1rem;
+    padding:1rem ;
 }
 
 .p-2{
@@ -553,4 +563,45 @@ h5{
 .p-5{
     padding:5rem;
 }
+
+.pl-1{
+    padding:1rem;
+}
+
+.pl-2{
+    padding:2rem;
+}
+
+.pl-3{
+    padding:3rem;
+}
+
+.pl-4{
+    padding:4rem;
+}
+
+.pl-5{
+    padding:5rem;
+}
+
+.pr-1{
+    padding:1rem;
+}
+
+.pr-2{
+    padding:2rem;
+}
+
+.pr-3{
+    padding:3rem;
+}
+
+.pr-4{
+    padding:4rem;
+}
+
+.pr-5{
+    padding:5rem;
+}
+
 /* animations */
