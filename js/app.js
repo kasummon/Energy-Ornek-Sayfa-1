@@ -4,15 +4,11 @@ let val = 0;
 let oldVal =0;
 let leftArrowButton = document.getElementById("left-arrow-bt");
 let rightArrowButton = document.getElementById("right-arrow-bt");
-//let cards = document.getElementsByClassName("card")
+let cards = document.getElementsByClassName("card")
 
 leftArrowButton.addEventListener("click", () => decrement());
 rightArrowButton.addEventListener("click", () => increment());
-//console.log(cards);
 
-/* for(let i = 0; i < cards.length ; i++){element => {
-    cards[indexof(element)].addEventListener("mouseover",() => {document.querySelectorAll(".card::after")[indexof(element)].style.backgroundColor = ""; });};};
- */
 photoInner.style.width = `${document.querySelectorAll(".photo-holder img").length*100}%`;
 
 for(let i = 0; i<images.length; i++){
@@ -65,10 +61,10 @@ function scaleDown(){
 
 function buttonSwitch() {
     if(val == oldVal){
-        document.getElementsByClassName("nav-box")[val].style.backgroundColor = "whitesmoke";
+        document.getElementsByClassName("nav-box")[val].style.backgroundColor = "rgb(189, 189, 189)";
     }
     else {
-        document.getElementsByClassName("nav-box")[val].style.backgroundColor = "whitesmoke";
+        document.getElementsByClassName("nav-box")[val].style.backgroundColor = "rgb(189, 189, 189)";
         document.getElementsByClassName("nav-box")[oldVal].style.backgroundColor = "";
     }
 }
