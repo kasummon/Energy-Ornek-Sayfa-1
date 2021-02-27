@@ -588,8 +588,12 @@ a{
     background: linear-gradient(180deg,rgba(42,  42,  42, 1)  0%, rgba(126, 126, 126 ,1) 100%);
 }
 
+.gradient-reverse{
+    padding-top: 0 !important;
+    background: linear-gradient(180deg,rgba(126, 126, 126 ,1) 0%, rgba(42,  42,  42, 1)  100%);
+}
+
 .kesfet{
-    width: 10%;
     outline: none;
     border:none;
     font-size:1.1rem;

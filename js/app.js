@@ -42,12 +42,29 @@ for(let i = 0; i<images.length; i++){
     images[i].style.width = `${100/images.length}%`;
 };
 
-document.getElementsByClassName("nav-box")[0].addEventListener("click", () => {oldVal = val; val = 0;photoInner.style.transform = `translateX(-${100/images.length*val}%)`;scaleDown();buttonSwitch();});
+document.getElementsByClassName("nav-box")[0].addEventListener("click", () => {
+    oldVal = val;
+     val = 0;
+    photoInner.style.transform = `translateX(-${100/images.length*val}%)`;scaleDown();
+    buttonSwitch();
+    
+});
 
 for(let i = 1; i<images.length; i++){    
     let myNode = document.getElementsByClassName("nav-box")[0].cloneNode(true);
     document.getElementById("landing-navigator").appendChild(myNode);
-    document.getElementsByClassName("nav-box")[i].addEventListener("click", () => {oldVal=val; val = i;photoInner.style.transform = `translateX(-${100/images.length*val}%)`;scaleDown();buttonSwitch();});
+    document.getElementsByClassName("nav-box")[i].addEventListener("click", () => {
+        oldVal=val;
+        val = i;photoInner.style.transform = `translateX(-${100/images.length*val}%)`;
+        scaleDown();
+        buttonSwitch();
+        setTimeout(()=>{
+            document.querySelectorAll(".text-container-inner")[val].classList.add("text-container-inner-trans");
+            document.querySelectorAll(".text-container-inner")[oldVal].classList.remove("text-container-inner-trans");
+            document.querySelectorAll(".kesfet")[val].classList.add("kesfet-trans");
+            document.querySelectorAll(".kesfet")[oldVal].classList.remove("kesfet-trans");
+        },500);
+    });
 };
 
 /* Functions */
