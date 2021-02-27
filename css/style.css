@@ -741,7 +741,6 @@ a{
 }
 
 .bg-fixed{
-    height: 100vh;
     background-color: rgba(223, 223, 223, 0.3);
 }
 
