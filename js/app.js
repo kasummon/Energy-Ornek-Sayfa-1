@@ -26,7 +26,7 @@ console.log(card1ArrowLeft,card1ArrowRight);
 card1ArrowRight.addEventListener("click",card1Ileri);
 card1ArrowLeft.addEventListener("click",card1Geri);
 
-innerRow.style.width = `${(card1.length)/5*100}%`;
+innerRow.style.width = `${(card1.length)/1*100}%`;
 
 /* cardInner[0].style.width = `${(card.length)/4*100}%`; */
 
@@ -58,6 +58,12 @@ for(let i = 1; i<images.length; i++){
         val = i;photoInner.style.transform = `translateX(-${100/images.length*val}%)`;
         scaleDown();
         buttonSwitch();
+        if(val == oldVal){
+            setTimeout(()=>{
+                document.querySelectorAll(".text-container-inner")[val].classList.add("text-container-inner-trans");
+                document.querySelectorAll(".kesfet")[val].classList.add("kesfet-trans");
+            },500);
+        };
         setTimeout(()=>{
             document.querySelectorAll(".text-container-inner")[val].classList.add("text-container-inner-trans");
             document.querySelectorAll(".text-container-inner")[oldVal].classList.remove("text-container-inner-trans");
@@ -65,6 +71,7 @@ for(let i = 1; i<images.length; i++){
             document.querySelectorAll(".kesfet")[oldVal].classList.remove("kesfet-trans");
         },500);
     });
+    console.log("current value:", val , "Old value", oldVal);
 };
 
 /* Functions */

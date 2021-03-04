@@ -155,7 +155,7 @@ a{
 }
 
 .landing-text-holder{
-    bottom:0px;
+    top:50%;
     width: 100%;
     height: 50%;
     z-index: 5;    
@@ -174,14 +174,16 @@ a{
     border:none;
     font-size:1.5rem;
     font-weight: 300;
-
-
 }
 
 #landing-navigator{
     height: 10%;
     width: 100%;
     
+}
+
+.hide{
+    display:none;
 }
 
 .nav-box{
@@ -203,22 +205,28 @@ a{
     right:0px;
 }
 
-.z-in-1{
-    z-index: -1;
+.hamburger{
+    width: 100%;
+    height: 100%;
+    padding:0.5rem;
+    margin-bottom: 0.2rem;
 }
 
-.z-in-2{
-    z-index: -2;
+.hamburger span {
+    width: 30px;
+    height: 2px;
+    margin-top:2px;
+    margin-bottom:2px;
 }
 
-.pushed{
+/* .pushed{
     background-color: rgba(104, 104, 104, 0.4);
     border-radius:20px;
     box-shadow:inset -5px -5px 20px 0px rgba(180, 180, 180, 0.4),
                inset  5px  5px 20px 0px rgba( 60,  60,  60, 0.7),
                      -5px -5px 20px 0px rgba(180, 180, 180, 0.4),
                       5px  5px 20px 0px rgba( 60,  60,  60, 0.7);
-}
+} */
 
 .card-arrow-nest{
     width: 100%;
@@ -251,7 +259,7 @@ a{
 .marka{
     top:0px;
     left:0;
-    width: 25%;
+    width: 20%;
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
     box-shadow:0 2px 10px .5px rgb(80, 0, 0);
@@ -263,7 +271,7 @@ a{
 }
 
 .marka img{
-    width: 80%;
+    width: 70%;
 }
 
 
@@ -275,13 +283,18 @@ a{
     place-items: center;
     z-index: 2;
     position:relative;
+    overflow: hidden;
+    object-fit: cover;
+    
 }
 
 
 
 .img-cover img{
-    width: 100%;
-    
+    height: 100%;
+    position:absolute;
+    top:0px;
+    left: -50%;  
 }
 
 .p-cover{
@@ -520,18 +533,19 @@ a{
     transform:scale(1.3);
     transform-origin: bottom;
     transition:1000ms ease-in-out;
+    filter: grayscale(0%);
 }
 
 .card-1:nth-child(1)::before{
-    background-image: url("../assets/photos/american-public-power-association-513dBrMJ_5w-unsplash.jpg");
+    background-image: url("../assets/photos/trafo-tesisleri.jpg");
 }
 
 .card-1:nth-child(2)::before{
-    background-image: url("../assets/photos/light-bulb-3104355_1920.jpg");
+    background-image: url("../assets/photos/enerji-nakil.jpg");
 }
 
 .card-1:nth-child(3)::before{
-    background-image: url("../assets/photos/pexels-pixabay-433308.jpg");
+    background-image: url("../assets/photos/panolar.jpg");
 }
 
 .card-1:nth-child(4)::before{
@@ -539,23 +553,31 @@ a{
 }
 
 .card-1:nth-child(5)::before{
-    background-image: url("../assets/photos/pexels-pixabay-459740.jpg");
+    background-image: url("../assets/photos/jenerator-tesisleri.jpg");
 }
 
 .card-1:nth-child(6)::before{
-    background-image: url("../assets/photos/rohan-makhecha-jw3GOzxiSkw-unsplash.jpg");
+    background-image: url("../assets/photos/güneş-enerji-sistemleri.jpg");
 }
 
 .card-1:nth-child(7)::before{
-    background-image: url("../assets/photos/rohan-makhecha-jw3GOzxiSkw-unsplash.jpg");
+    background-image: url("../assets/photos/elektrik-proje.jpg");
 }
 
 .card-1:nth-child(8)::before{
-    background-image: url("../assets/photos/rohan-makhecha-jw3GOzxiSkw-unsplash.jpg");
+    background-image: url("../assets/photos/bakım-onarım.jpg");
 }
 
 .card-1:nth-child(9)::before{
-    background-image: url("../assets/photos/rohan-makhecha-jw3GOzxiSkw-unsplash.jpg");
+    background-image: url("../assets/photos/Orta-gerilim-tesisleri.jpg");
+}
+
+.card-1:nth-child(10)::before{
+    background-image: url("../assets/photos/Abone-projeleri.jpg");
+}
+
+.card-1:nth-child(11)::before{
+    background-image: url("../assets/photos/ruhsat-projeleri.jpg");
 }
 
 .card-1 h6{
@@ -567,20 +589,18 @@ a{
 }
 
 .card-1-left{
-    height: 15%;
-    width: 3%;
     top:40%;
     left:1%;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    padding:1rem;
     opacity: 0;
 }
 
 .card-1-right{
-    height: 15%;
-    width: 3%;
     top:40%;
     right:1%;
-    font-size: 1.2rem;
+    padding:1rem;
+    font-size: 1.4rem;
 }
 
 .gradient{
@@ -611,12 +631,10 @@ a{
 }
 
 .kesfet-2{
-    width:20%;
     margin-left: auto;
     outline: none;
     border:none;
     font-size:1.1rem;
-    border-radius:20px;
 }
 
 .text-box{
@@ -762,7 +780,6 @@ a{
     width: 100%;
     flex:1 1 30%;
     background-color:rgba(175, 175, 175, 0.9) ;
-    height: 200px;
     border-radius: 20px;
 }
 
@@ -884,6 +901,10 @@ footer p {
     transition: cubic-bezier(0.165, 0.84, 0.44, 1) 400ms;
 }
 
+.stick-to-top li{
+    align-self: stretch;
+}
+
 .stick-to-top li:hover a::after{
     transform:translateX(0%);
 }
@@ -895,6 +916,11 @@ footer p {
 
 .stick-to-top li:nth-child(2) {
     margin-left: auto;
+}
+
+.stick-to-top li:last-child {
+    display:none;
+    padding:0.4rem;
 }
 
 /* ###################################################
@@ -969,6 +995,18 @@ h6{font-size:1.2rem;}
 .pr-4{padding-right:6rem;}
 .pr-5{padding-right:10rem;}
 
+.pb-1{padding-bottom:0.8rem;}
+.pb-2{padding-bottom:2.5rem;}
+.pb-3{padding-bottom:4rem;}
+.pb-4{padding-bottom:6rem;}
+.pb-5{padding-bottom:10rem;}
+
+.pt-1{padding-top:0.8rem;}
+.pt-2{padding-top:2.5rem;}
+.pt-3{padding-top:4rem;}
+.pt-4{padding-top:6rem;}
+.pt-5{padding-top:10rem;}
+
 .m-1{margin:0.8rem;}
 .m-2{margin:2.5rem;}
 .m-3{margin:4rem;}
@@ -987,6 +1025,18 @@ h6{font-size:1.2rem;}
 .mr-4{margin-right:6rem;}
 .mr-5{margin-right:10rem;}
 
+.mb-1{margin-bottom:0.8rem;}
+.mb-2{margin-bottom:2.5rem;}
+.mb-3{margin-bottom:4rem;}
+.mb-4{margin-bottom:6rem;}
+.mb-5{margin-bottom:10rem;}
+
+.mt-1{margin-top:0.8rem;}
+.mt-2{margin-top:2.5rem;}
+.mt-3{margin-top:4rem;}
+.mt-4{margin-top:6rem;}
+.mt-5{margin-top:10rem;}
+
 .m-auto{margin-left:auto; margin-right: auto;}
 
 .font-10{font-size: 10px;}
@@ -994,28 +1044,193 @@ h6{font-size:1.2rem;}
 .font-30{font-size: 30px;}
 
 /* colors */
-.bg-sec-3 { background-color: rgba( 42,  42,  42, 1) }
-.bg-sec-2 { background-color: rgba(126, 126, 126 ,1) }
-.bg-sec-1 { background-color: rgba(175, 175, 175, 1) }
-.bg-pri-3 { background-color: rgba(124,   0,   5, 1) }
-.bg-pri-2 { background-color: rgba(203,   4,   9, 1) }
-.bg-pri-1 { background-color: rgba(255,  41,  48, 1) }
+.bg-sec-3 { background-color: rgba( 42,  42,  42, 1); }
+.bg-sec-2 { background-color: rgba(126, 126, 126 ,1); }
+.bg-sec-1 { background-color: rgba(175, 175, 175, 1); }
+.bg-pri-3 { background-color: rgba(124,   0,   5, 1); }
+.bg-pri-2 { background-color: rgba(203,   4,   9, 1); }
+.bg-pri-1 { background-color: rgba(255,  41,  48, 1); }
 
-.bg-col-w { background-color: rgba(255,255,255, 1)}
-.bg-col-b { background-color: rgb(0, 0, 0)}
+.bg-col-w { background-color: rgba(255,255,255, 1);}
+.bg-col-b { background-color: rgb(0, 0, 0);}
 
-.sec-3 { color: rgba( 42,  42,  42, 1) }
-.sec-2 { color: rgba(126, 126, 126, 1) }
-.sec-1 { color: rgba(175, 175, 175, 1) }
-.pri-3 { color: rgba(124,   0,   5, 1) }
-.pri-2 { color: rgba(203,   4,   9, 1) }
-.pri-1 { color: rgba(255,  41,  48, 1) }
+.sec-3 { color: rgba( 42,  42,  42, 1); }
+.sec-2 { color: rgba(126, 126, 126, 1); }
+.sec-1 { color: rgba(175, 175, 175, 1); }
+.pri-3 { color: rgba(124,   0,   5, 1); }
+.pri-2 { color: rgba(203,   4,   9, 1); }
+.pri-1 { color: rgba(255,  41,  48, 1); }
 
-.col-w { color: rgb(255, 255, 255)}
-.col-b { color: rgb(0, 0, 0)}
+.col-w { color: rgb(255, 255, 255);}
+.col-b { color: rgb(0, 0, 0);}
 
 .bg-tester{background-color: rebeccapurple;}
-.border-tester{border:2px solid blue}
+.border-tester{border:2px solid blue;}
 
 
 /* animations */
+
+
+/* media queries */
+
+@media (max-width: 1023px){
+
+
+    .stick-to-top li{
+        display: none;
+    }
+
+    .stick-to-top li:last-child{
+        display: block;
+        margin-left: auto;
+    }
+
+    .hide{
+        display:block;
+        padding:2px;
+    }
+
+    .header{
+        display: none;
+    }
+
+    .inner-row-out{
+        transform: translateY(0%);
+    }
+
+    .arrow{
+        width: 2.1rem;
+        height: 2.1rem;
+        margin:0px;       
+        font-size:1rem;
+    }
+
+    .marka {
+        width: 35%;
+        padding-right: 0.5rem;
+        margin:0;
+    }
+
+    .marka img{
+        width: 80%;
+    }
+
+    .photo-holder{
+        margin-top:5vh;
+        height: 35vh;
+    }
+
+
+    .text-container .kesfet{
+        display: none;
+    }
+
+    .landing-text-holder{
+        top:70%;
+        height: 35%;  
+    }
+    
+
+    section{
+        padding:0px !important;
+    }
+
+    section h4{
+        padding:10px !important;
+    }
+
+    .gradient .container-60{
+        width: 100% !important;
+        flex-direction: column;
+    }
+
+    .img-cover{
+        flex:0 0 10%;
+        padding:1rem 0;
+    }
+
+    .p-cover{
+        width: 100%;
+        flex: 1 1 90%;
+        line-height: 1.2rem;
+        padding:2rem !important;
+    }
+
+
+    /* styles */
+    .container-60 {width: 70%;}
+    .container-70 {width: 85%;}
+    .container-80 {width: 95%;}
+    .container-90 {width: 97%;}
+    .container-100 {width: 100%;}
+
+    h1{font-size: 3rem;}
+    h2{font-size: 2.5rem;}
+    h3{font-size: 1.9rem;}
+    h4{font-size: 1.5rem;}
+    h5{font-size: 1.2rem;}
+    h6{font-size:1rem;}
+    p{font-size: 0.8rem;}
+
+    .p-1{padding:0.3rem;}
+    .p-2{padding:0.8rem;}
+    .p-3{padding:1.5rem;}
+    .p-4{padding:2rem;}
+    .p-5{padding:3rem;}
+
+    .pl-1{padding-left:0.3rem;}
+    .pl-2{padding-left:0.8rem;}
+    .pl-3{padding-left:1.5rem;}
+    .pl-4{padding-left:2rem;}
+    .pl-5{padding-left:3rem;}
+
+    .pr-1{padding-right:0.3rem;}
+    .pr-2{padding-right:0.8rem;}
+    .pr-3{padding-right:1.5rem;}
+    .pr-4{padding-right:2rem;}
+    .pr-5{padding-right:3rem;}
+
+    .pb-1{padding-bottom:0.3rem;}
+    .pb-2{padding-bottom:0.8rem;}
+    .pb-3{padding-bottom:1.5rem;}
+    .pb-4{padding-bottom:2rem;}
+    .pb-5{padding-bottom:3rem;}
+
+    .pt-1{padding-top:0.3rem;}
+    .pt-2{padding-top:0.8rem;}
+    .pt-3{padding-top:1.5rem;}
+    .pt-4{padding-top:2rem;}
+    .pt-5{padding-top:3rem;}
+
+    .m-1{margin:0.3rem;}
+    .m-2{margin:0.8rem;}
+    .m-3{margin:1.5rem;}
+    .m-4{margin:2rem;}
+    .m-5{margin:3rem;}
+
+    .ml-1{margin-left:0.3rem;}
+    .ml-2{margin-left:0.8rem;}
+    .ml-3{margin-left:1.5rem;}
+    .ml-4{margin-left:2rem;}
+    .ml-5{margin-left:3rem;}
+
+    .mr-1{margin-right:0.3rem;}
+    .mr-2{margin-right:0.8rem;}
+    .mr-3{margin-right:1.5rem;}
+    .mr-4{margin-right:2rem;}
+    .mr-5{margin-right:3rem;}
+
+    .mb-1{margin-bottom:0.3rem;}
+    .mb-2{margin-bottom:0.8rem;}
+    .mb-3{margin-bottom:1.5rem;}
+    .mb-4{margin-bottom:2rem;}
+    .mb-5{margin-bottom:3rem;}
+
+    .mt-1{margin-top:0.3rem;}
+    .mt-2{margin-top:0.8rem;}
+    .mt-3{margin-top:1.5rem;}
+    .mt-4{margin-top:2rem;}
+    .mt-5{margin-top:3rem;}
+
+
+}
