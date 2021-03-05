@@ -95,10 +95,15 @@ a{
     left: 0px;
 }
 
-.photo-holder{
+.landing-cover{
     height: 100vh;
+    width: 100%;
+}
+
+.photo-holder{
+    height: 100%;
     overflow: hidden;
-    object-fit: cover;
+    z-index: -1;
 }
 
 #photo-inner{
@@ -106,9 +111,9 @@ a{
 }
 
 .img-container{
-    height: 100%;
     overflow: hidden;
 }
+
 
 .text-container{
     width: 100%;
@@ -139,11 +144,8 @@ a{
 }
 
 .photo-holder img{
-    width: 100%;
-    object-fit: cover; 
     transform: scale(1.2); 
     transition:ease-in-out 8000ms;
-    z-index: -1;
 }
 
 .img-container:nth-child(odd) img{
@@ -901,10 +903,6 @@ footer p {
     transition: cubic-bezier(0.165, 0.84, 0.44, 1) 400ms;
 }
 
-.stick-to-top li{
-    align-self: stretch;
-}
-
 .stick-to-top li:hover a::after{
     transform:translateX(0%);
 }
@@ -1078,6 +1076,7 @@ h6{font-size:1.2rem;}
 
     .stick-to-top li{
         display: none;
+        align-self: stretch;
     }
 
     .stick-to-top li:last-child{
@@ -1115,21 +1114,26 @@ h6{font-size:1.2rem;}
         width: 80%;
     }
 
-    .photo-holder{
-        margin-top:5vh;
-        height: 35vh;
+    .landing-cover{
+        margin-top: 7vh;
+        height: 70vh;
     }
 
+    .slider-img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
 
     .text-container .kesfet{
         display: none;
     }
 
     .landing-text-holder{
-        top:70%;
+        top:65%;
         height: 35%;  
     }
-    
 
     section{
         padding:0px !important;
@@ -1156,6 +1160,10 @@ h6{font-size:1.2rem;}
         padding:2rem !important;
     }
 
+    .footer-elements:nth-child(1),
+    .footer-elements:nth-child(2){
+        display: none;
+    }
 
     /* styles */
     .container-60 {width: 70%;}
