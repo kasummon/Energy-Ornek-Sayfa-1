@@ -17,6 +17,8 @@ let card1ArrowLeft = document.querySelector(".card-1-left");
 let card1ArrowRight = document.querySelector(".card-1-right");
 let card1Say = 0;
 let card1Amount = 100/card1.length;
+let hamburger = document.querySelector(".hamburger");
+
 
 document.querySelectorAll(".text-container-inner")[val].classList.add("text-container-inner-trans");
 document.querySelectorAll(".kesfet")[val].classList.add("kesfet-trans");
@@ -37,6 +39,8 @@ leftArrowButton.addEventListener("click", decrement);
 rightArrowButton.addEventListener("click", increment);
 
 photoInner.style.width = `${document.querySelectorAll(".photo-holder img").length*100}%`;
+
+hamburger.addEventListener("click", open);
 
 for(let i = 0; i<images.length; i++){
     images[i].style.width = `${100/images.length}%`;
@@ -78,6 +82,18 @@ for(let i = 1; i<images.length; i++){
 buttonSwitch();
 scaleDown();
 looper(); 
+
+function open () {
+    document.querySelector(".pop-nav").classList.remove("pop-nav-trans");
+    hamburger.removeEventListener("click", open);
+    hamburger.addEventListener("click", close);
+}
+
+function close () {
+    document.querySelector(".pop-nav").classList.add("pop-nav-trans");
+    hamburger.removeEventListener("click", close);
+    hamburger.addEventListener("click", open);
+}
 
 function card1Ileri (){
 
