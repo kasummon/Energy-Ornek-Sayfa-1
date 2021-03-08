@@ -16,6 +16,7 @@ let card1 = document.querySelectorAll(".card-1");
 let card1ArrowLeft = document.querySelector(".card-1-left");
 let card1ArrowRight = document.querySelector(".card-1-right");
 let card1Say = 0;
+let card1MaxVal = card1.length;
 let card1Amount = 100/card1.length;
 let hamburger = document.querySelector(".hamburger");
 
@@ -28,7 +29,18 @@ console.log(card1ArrowLeft,card1ArrowRight);
 card1ArrowRight.addEventListener("click",card1Ileri);
 card1ArrowLeft.addEventListener("click",card1Geri);
 
-innerRow.style.width = `${(card1.length)/5*100}%`;
+console.log(screen.width);
+
+if(screen.width <= 1024){
+    innerRow.style.width = `${(card1.length)/1*100}%`;
+    card1MaxVal = card1.length-1;
+}
+else{
+    innerRow.style.width = `${(card1.length)/5*100}%`;
+    card1MaxVal = card1.length-5;
+};
+
+
 
 /* cardInner[0].style.width = `${(card.length)/4*100}%`; */
 
@@ -98,12 +110,11 @@ function card1Ileri (){
         card1ArrowLeft.style.pointerEvents = "all";
     }
 
-    console.log("ileri");
     card1Say++;
     innerRow.style.transform = `translateX(-${card1Say*card1Amount}%)`;
     console.log(card1Say*card1Amount);
 
-    if(card1Say == (card1.length-5)){
+    if(card1Say == card1MaxVal){
         card1ArrowRight.style.opacity = "0";
         card1ArrowRight.style.pointerEvents = "none";
     }
@@ -111,7 +122,7 @@ function card1Ileri (){
 
 function card1Geri (){
 
-    if(card1Say == (card1.length-5)){
+    if(card1Say == card1MaxVal){
         card1ArrowRight.style.opacity = "1";
         card1ArrowRight.style.pointerEvents = "all";
     }

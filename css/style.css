@@ -38,8 +38,10 @@ a{
     z-index:20;
     margin-top: 5vh;
     transition:1000ms ease-in-out;
-    background-color:rgba(126, 126, 126, 0.8);
+    background-color:rgba(126, 126, 126, 0.356);      
+    backdrop-filter: blur(5px);
     display: none;
+    padding-bottom: 10vh;
 }
 
 .pop-inner{
@@ -48,7 +50,7 @@ a{
 }
 
 .pop-nav-trans{
-    transform: translateX(100%);
+    transform: translateX(110%);
 }
 
 .pop-middle{
@@ -71,7 +73,7 @@ a{
 }
 
 .pop-middle a{
-    background-color:rgba(126, 126, 126, 0.5);
+    /* background-color:rgba(126, 126, 126, 0.5); */
 }
 
 .logo-holder{
