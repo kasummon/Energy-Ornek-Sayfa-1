@@ -3,6 +3,7 @@
     padding:0;
     box-sizing:border-box;
     font-family: 'Rubik', sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* *:focus{
@@ -24,7 +25,6 @@ ul{
 a{
     text-decoration: inherit;
     color:inherit;
-    display: inline-block;
     width: 100%;
     height: 100%;
 }
@@ -426,12 +426,12 @@ a{
     width: 100%;
     flex:0 0 30%;
     height: 300px;
-    min-width: 200px;
     border-radius:20px;
     box-shadow:  -0.7rem -0.7rem 1.7rem 0 rgba(180, 180, 180, 0.7),
                   0.7rem  0.7rem 1.7rem 0 rgba( 42,  42,  42, 0.5);
     background: linear-gradient(-45deg, rgba(42,42,42,0.5) 0%, rgba(180,180,180,0.7) 70%);
     transition:200ms ease-in-out;
+    overflow: hidden;
 }
 
 .logo-card-inner{
@@ -899,6 +899,7 @@ a{
     height: 40%;
     border-left:rgba(124,   0,   5, 1) 2px solid;
     border-right:rgba(124,   0,   5, 1) 2px solid;
+    pointer-events: none;
 }
 
 footer i {
@@ -908,6 +909,19 @@ footer i {
 footer p {
     width:70%;
     font-size:1.2rem
+}
+
+.current-page{
+    pointer-events: none;
+}
+
+.current-page::after{
+    transform:translateX(0%) !important;
+}
+
+.current-page::before{
+    transform: translate(0%) !important;
+    opacity: 1 !important;
 }
 
 .stick-to-top a{
@@ -927,10 +941,10 @@ footer p {
     border-left:2px solid ;
     border-top:2px solid ;
     border-radius: 2px;
-    visibility: hidden;
+    opacity: 0;
     transform: translate(30%, 30%);
-    transition: visibility cubic-bezier(0.165, 0.84, 0.44, 1) 150ms,
-                transform cubic-bezier(0.165, 0.84, 0.44, 1) 400ms;
+    transition: opacity ease-in-out 150ms,
+                transform ease-in-out 400ms;
 }
 
 .stick-to-top ul a::after{
@@ -943,7 +957,7 @@ footer p {
     border-bottom:2px solid;
     border-radius: 2px;
     transform:translateX(-120%);
-    transition: cubic-bezier(0.165, 0.84, 0.44, 1) 400ms;
+    transition: ease-in-out 400ms;
 }
 
 .stick-to-top li:hover a::after{
@@ -952,7 +966,9 @@ footer p {
 
 .stick-to-top li:hover a::before{
     transform: translate(0%, 0%);
+    opacity: 1;
 }
+
 
 .stick-to-top li:nth-child(2) {
     margin-left: auto;
@@ -961,6 +977,80 @@ footer p {
 .stick-to-top li:last-child {
     display:none;
     padding:0.4rem;
+}
+
+.hiz-card{
+    width: 100%;
+    height: 325px;
+    border-radius:20px;
+    overflow: hidden;
+    margin:30px auto;
+    box-shadow:  -0.7rem -0.7rem 1.7rem 0 rgba(180, 180, 180, 0.7),
+                  0.7rem  0.7rem 1.7rem 0 rgba( 42,  42,  42, 0.5);
+    background: linear-gradient(-45deg, rgba(42,42,42,0.5) 0%, rgba(180,180,180,0.7) 70%);
+}
+
+.hiz-img{
+    width: 30%;
+    height: 100%;
+    flex:1 1 30%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hiz-card:nth-child(1) .hiz-img{ 
+    background-image: url("../assets/photos/trafo-tesisleri.jpg");
+}
+
+.hiz-card:nth-child(2) .hiz-img{ 
+    background-image: url("../assets/photos/enerji-nakil.jpg");
+}
+
+.hiz-card:nth-child(3) .hiz-img{ 
+    background-image: url("../assets/photos/panolar.jpg");
+}
+
+.hiz-card:nth-child(4) .hiz-img{ 
+    background-image: url("../assets/photos/trafo-tesisleri.jpg");
+}
+
+.hiz-card:nth-child(5) .hiz-img{ 
+    background-image: url("../assets/photos/jenerator-tesisleri.jpg");
+}
+
+.hiz-card:nth-child(6) .hiz-img{ 
+    background-image: url("../assets/photos/güneş-enerji-sistemleri.jpg");
+}
+
+.hiz-card:nth-child(7) .hiz-img{ 
+    background-image: url("../assets/photos/elektrik-proje.jpg");
+}
+
+.hiz-card:nth-child(8) .hiz-img{ 
+    background-image: url("../assets/photos/bakım-onarım-2.jpg");
+}
+
+.hiz-card:nth-child(9) .hiz-img{ 
+    background-image: url("../assets/photos/Orta-gerilim-tesisleri.jpg");
+}
+
+.hiz-card:nth-child(10) .hiz-img {
+    background-image: url("../assets/photos/Abone-projeleri.jpg");
+}
+
+.hiz-card:nth-child(11) .hiz-img {
+    background-image: url("../assets/photos/ruhsat-projeleri.jpg");
+}
+
+
+
+.hiz-text{
+    width: 100%;
+    height: 100%;
+    flex: 1 1 70%;
+    display: grid;
+    place-items: center;
 }
 
 /* ###################################################
@@ -1113,7 +1203,7 @@ h6{font-size:1.2rem;}
 
 /* media queries */
 
-@media (max-width: 1023px){
+@media (max-width: 1024px){
 
 
     .stick-to-top li{
@@ -1191,6 +1281,24 @@ h6{font-size:1.2rem;}
 
     .pop-nav{
         display:block;
+    }
+
+    .logo-group{
+        flex-direction: column;
+        width: 48% !important;
+        margin-top: 0 !important;
+    }
+    
+    /* Yeni bir logo eklersen .flex-revert'e flex-grow-1 ver */
+
+    .flex-revert{
+        flex-direction:row !important;
+        flex-grow: 1;
+    }
+
+    .logo-card{
+        height: 150px;
+        flex-grow: 1;
     }
 
     .img-cover{

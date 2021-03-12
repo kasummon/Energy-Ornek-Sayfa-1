@@ -29,8 +29,6 @@ console.log(card1ArrowLeft,card1ArrowRight);
 card1ArrowRight.addEventListener("click",card1Ileri);
 card1ArrowLeft.addEventListener("click",card1Geri);
 
-console.log(screen.width);
-
 if(screen.width <= 1024){
     innerRow.style.width = `${(card1.length)/1*100}%`;
     card1MaxVal = card1.length-1;
